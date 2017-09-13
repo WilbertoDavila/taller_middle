@@ -1,6 +1,5 @@
 package middleTaller;
 
-import java.util.HashMap;
 import java.util.Vector;
 
 public class AppMain {
@@ -24,14 +23,23 @@ public class AppMain {
 		
 		//Nomina
 		System.out.println("\n\nPunto 2: nomina");
-		Nomina nomina = new Nomina();
+		Cargo analista1 = new Cargo(1, "Analista1", 4000000);;
+		Cargo analista2 = new Cargo(2, "Analista2", 3500000);;
+		Cargo jefe = new Cargo(3, "Jefe", 5000000);;
 		
+		Nomina nomina = new Nomina(001, "13/09/2017");
+		nomina.add("Luis", analista1);
+		nomina.add("Andres", analista2);
+		nomina.add("Wil", analista1);
+		nomina.add("Ana", jefe);
+		nomina.add("Sara", analista2);
+		nomina.calcularNomina();
 		
 		
 		//Lista
 		System.out.println("\n\nPunto 3: lista de numeros");
 		
-		Vector<Integer> lista = new Vector();
+		Vector<Integer> lista = new Vector<Integer>();
 		MathHelper myMathHelper = new MathHelper();
 		myMathHelper.add(lista, 3);
 		myMathHelper.add(lista, 2);

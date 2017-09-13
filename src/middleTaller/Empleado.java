@@ -4,13 +4,13 @@ public class Empleado {
 
 	private String nombre;
 	private String documento;
-	public int idCargo;
+	public Cargo cargo;
 	
-	public Empleado(String nombre, String documento, int idCargo){
+	public Empleado(String nombre, String documento, Cargo cargo){
 		super();
 		this.nombre = nombre;
 		this.documento = documento;
-		this.setIdCargo(idCargo);
+		this.cargo = cargo;
 	}
 	
 	public String getNombre() {
@@ -25,11 +25,9 @@ public class Empleado {
 	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
-	public int getIdCargo() {
-		return idCargo;
+	public Cargo getCargo() {
+		return cargo;
 	}
-	public void setIdCargo(int idCargo) {
-		this.idCargo = idCargo;
-	}
+	
 
 }
