@@ -34,15 +34,19 @@ public class Nomina {
 	}
 	
 	public void calcularNomina(){
+		double totalSalarios = 0;
 		System.out.println("idNomina: " + this.id + " Fecha: " + this.fecha.toString());
 		Iterator<Entry<String, Object>> it = this.nominaHash.entrySet().iterator();
 		while(it.hasNext()){
 			//Recuperar el elemento del HashMap
 			Entry <String, Object> e = (Entry<String, Object>) it.next();
-			System.out.println("Empleado: " + e.getKey() + ", " + ((Empleado) e.getValue()).getNombre()
-					+ ". Cargo: " + ((Empleado) e.getValue()).getCargo().getDescripcion() 
-					+ ". Salario: " + ((Empleado) e.getValue()).getCargo().getSalario());	
-			}
+			System.out.println("Empleado: " + e.getKey() + ", " + ((Empleado) e.getValue()).getNombre() + ","
+					+ "\t" +" Cargo: " + ((Empleado) e.getValue()).getCargo().getDescripcion() 
+					+ "\t" + "Salario: " + ((Empleado) e.getValue()).getCargo().getSalario());
+			totalSalarios = totalSalarios + ((Empleado) e.getValue()).getCargo().getSalario();
+		}
+		System.out.println("Total: " + totalSalarios);
+		
 	}
 	
 }

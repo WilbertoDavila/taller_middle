@@ -23,9 +23,9 @@ public class AppMain {
 		
 		//Nomina
 		System.out.println("\n\nPunto 2: nomina");
-		Cargo analista1 = new Cargo(1, "Analista1", 4000000);;
-		Cargo analista2 = new Cargo(2, "Analista2", 3500000);;
-		Cargo jefe = new Cargo(3, "Jefe", 5000000);;
+		Cargo analista1 = new Cargo(1, "Analista1", 4000);;
+		Cargo analista2 = new Cargo(2, "Analista2", 3500);;
+		Cargo jefe = new Cargo(3, "Jefe", 5000);;
 		
 		Nomina nomina = new Nomina(001, "13/09/2017");
 		nomina.add("Luis", analista1);
